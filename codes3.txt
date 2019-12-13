@@ -1,0 +1,31 @@
+insert into drug_info  (dr_acc_no, dr_name, smiles, inchi_key, CAS_NO, mol_WT, mol_formula, pubchem_id, IUPAC, dr_ei)
+values
+('NIP0001', 'pazopanib', 'CC1=C(C=C(C=C1)NC2=NC=CC(=N2)N(C)C3=CC4=NN(C(=C4C=C3)C)C)S(=O)(=O)N', 'CUIHSIWYWATEQL-UHFFFAOYSA-N', '444731-52-6', '437.50', 'C21H23N7O2S', '10113978', '5-[[4-[(2,3-dimethylindazol-6-yl)-methyl-amino]pyrimidin-2-yl]amino]-2-methyl-benzenesulfonamide', '5.68')
+
+('NIP0002', 'gefitinib', 'COC1=C(C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl)OCCCN4CCOCC4', 'XGALLCVXEZPNRQ-UHFFFAOYSA-N', '184475-35-2', '446.90', 'C22H24ClFN4O3', '123631', 'N-(3-chloro-4-fluoro-phenyl)-7-methoxy-6-(3-morpholinopropoxy)quinazolin-4-amine', 2.56)
+('NIP0003', 'erythromycin', ' CCC1C(C(C(C(=O)C(CC(C(C(C(C(C(=O)O1)C)OC2CC(C(C(O2)C)O)(C)OC)C)OC3C(C(CC(O3)C)N(C)C)O)(C)O)C)C)O)(C)O', 'ULGZDMOVFRHVEP-RWJQBGPGSA-N\n', '114-07-8', '733.93', 'C37H67NO13\n', '12560', '(3R,4S,5S,6R,7R,9R,11R,12R,13S,14R)-6-{[(2S,3R,4S,6R)-4-(dimethylamino)-3-hydroxy-6-methyloxan-2-yl]oxy}-14-ethyl-7,12,13-trihydroxy-4-{[(2R,4R,5S,6S)-5-hydroxy-4-methoxy-4,6-dimethyloxan-2-yl]oxy}-3,5,7,9,11,13-hexamethyl-1-oxacyclotetradecane-2,10-dione', 0.25)
+('NIP0008', ' lumiracoxib', 'CC1=CC(=C(C=C1)NC2=C(C=CC=C2Cl)F)CC(=O)O', 'KHPKQFYUPIUARC-UHFFFAOYSA-N', '220991-20-8', '293.72', 'C15H13ClFNO2', '151166', '2-[2-(2-chloro-6-fluoroanilino)-5-methylphenyl]acetic acid', '2.45');
+
+
+insert into met_info(met_acc_no, dr_acc_no, met_smiles, met_mol_wt, met_mol_formula, met_ei)
+values(
+	'NIP0001M1',	'NIP0001',	'CCC1C'	,    25	,    'c10h20'	,	2.65),	
+	('NIP0001M2',	'NIP0001',	 'CCC1C',	25	,	'c10h20',		2.65),		
+	('NIP0001M3',   'NIP0001',  'CCC1C',	25,		'c10h20',		2.65),		
+	('NIP0002M1',	'NIP0002',	 'CCC1C',	25,		'c10h20',		2.65),			
+	('NIP0002M2',	'NIP0002',	'CCC1C'	,    25	,	'c10h20',		2.65),			
+	('NIP0002M3',	'NIP0002',	'CCC1C' ,	25,		'c10h20',		2.65),			
+	('NIP0008M1',	'NIP0008',	'CCC1C'	,    25,	'c10h20',	2.65),			
+	('NIP0008M2',	'NIP0008',	'CCC1C'	,    25,	'c10h20',	2.65),			
+	('NIP0008M3',	'NIP0008',	'CCC1C',	   25,	'c10h20',	2.65);		
+
+
+    insert into local_reactivity_descriptor (met_acc_no, reactive_centre, fukui_function, local_ei)
+    values( 
+( 'NIP0008M2', 'C15', '0.06400', '0.31360'),
+( 'NIP0008M2', 'C17', '0.04100', '0.20090'),
+( 'NIP0008M2', 'C18', '0.03900', '0.17640'),
+( 'NIP0008M8', 'C11', '0.17700', '0.54339'),
+( 'NIP0008M8', 'C10', '0.03600', '0.11052'),
+( 'NIP0008M8', 'C8', '0.05300', '0.16271'),
+( 'NIP0008M8', 'C7', '0.02100', '0.06447');
